@@ -6,7 +6,6 @@ import (
 	"strconv"
 
 	"github.com/devminnu/weatherapp/location/config"
-	"github.com/devminnu/weatherapp/location/db"
 	"github.com/devminnu/weatherapp/location/logger"
 	"github.com/devminnu/weatherapp/location/router"
 	"github.com/devminnu/weatherapp/location/service"
@@ -16,7 +15,7 @@ import (
 func main() {
 	config.Load()
 	logger.Init()
-	db.Init()
+	// db.Init()
 	router.Init()
 	service.Init()
 	router := router.Get()
