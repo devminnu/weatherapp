@@ -2,14 +2,14 @@ module github.com/devminnu/weatherapp/location
 
 go 1.15
 
-replace (
-	github.com/devminnu/weatherapp/location/router => /Users/minhaj/go/src/apps/weatherapp/location/router
-	github.com/devminnu/weatherapp/location/config => /Users/minhaj/go/src/apps/weatherapp/location/config
-	github.com/devminnu/weatherapp/location/db => /Users/minhaj/go/src/apps/weatherapp/location/db
-	github.com/devminnu/weatherapp/location/logger => /Users/minhaj/go/src/apps/weatherapp/location/logger
-	github.com/devminnu/weatherapp/location/service => /Users/minhaj/go/src/apps/weatherapp/location/service
-	github.com/devminnu/weatherapp/pb => /Users/minhaj/go/src/apps/weatherapp/pb
-)
+// replace (
+// 	github.com/devminnu/weatherapp/location/router => /Users/minhaj/go/src/apps/weatherapp/location/router
+// 	github.com/devminnu/weatherapp/location/config => /Users/minhaj/go/src/apps/weatherapp/location/config
+// 	github.com/devminnu/weatherapp/location/db => /Users/minhaj/go/src/apps/weatherapp/location/db
+// 	github.com/devminnu/weatherapp/location/logger => /Users/minhaj/go/src/apps/weatherapp/location/logger
+// 	github.com/devminnu/weatherapp/location/service => /Users/minhaj/go/src/apps/weatherapp/location/service
+// 	github.com/devminnu/weatherapp/pb => /Users/minhaj/go/src/apps/weatherapp/pb
+// )
 
 require (
 	github.com/akath19/gin-zap v0.0.0-20180806194049-1d9e5171c53e
