@@ -1,0 +1,1 @@
+k create deployment location --image nginx --port 33001 --dry-run=client -oyaml > deployment.yaml

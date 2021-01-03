@@ -1,0 +1,20 @@
+syntax = "proto3";
+option go_package = "pb/location";
+
+service LocationService {
+  rpc getLocationByID(LocationID) returns (Location);
+  // rpc addLocation(Location) returns(LocationID);
+  // rpc updateLocation(Location) returns(LocationUpdateResponse);
+  // rpc getAllLocation() returns(Location);
+}
+
+message Location {
+  string id = 1;
+  string name = 2;
+  string avgTemprature = 3;
+  float avgSoilTemprature = 4;
+}
+
+message LocationID { string id = 1; }
+
+message LocationUpdateResponse { bool response = 1; }
