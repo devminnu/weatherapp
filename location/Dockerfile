@@ -1,26 +1,21 @@
-FROM golang:1.14
+FROM golang
 
 ENV GO111MODULE=on
-# ENV GOFLAGS=-mod=vendor
-# ENV APP_USER app
-ENV APP_HOME /go/src/apps/weatherapp
 
-WORKDIR $APP_HOME
+WORKDIR  /Users/minhaj/go/src/apps/weatherapp
 
-ADD location $APP_HOME/location
-ADD pb $APP_HOME/pb
+COPY . .
 
-# ARG GROUP_ID
-# ARG USER_ID
+WORKDIR  /Users/minhaj/go/src/apps/weatherapp/location
 
-# RUN groupadd --gid $GROUP_ID app && useradd -m -l --uid $USER_ID --gid $GROUP_ID $APP_USER
-# RUN mkdir -p $APP_HOME && chown -R $APP_USER:$APP_USER $APP_HOME
-
-# USER $APP_USER
-# WORKDIR $APP_HOME
 EXPOSE 33001
-WORKDIR  /go/src/apps/weatherapp/location
 
-# CMD ["pwd"]
-# CMD ["ls"]
-CMD ["go", "run","main.go"]
+
+RUN [ "go", "build", "-o","locationapp", "main.go"]
+
+RUN [ "chmod", "777", "locationapp" ]
+
+CMD [ "./locationapp" ]
+
+# CMD [ "go", "run",  "main.go"]
+

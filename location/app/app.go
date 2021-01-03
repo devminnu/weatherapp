@@ -1,9 +1,6 @@
 package app
 
 import (
-	"time"
-
-	"github.com/devminnu/weatherapp/location/config"
 	"github.com/jmoiron/sqlx"
 	"go.uber.org/zap"
 )
@@ -16,10 +13,10 @@ var (
 func Init() {
 	InitLogger()
 
-	err := initDB()
-	if err != nil {
-		panic(err)
-	}
+	/* 	err := initDB()
+	   	if err != nil {
+	   		panic(err)
+	   	} */
 }
 
 func InitLogger() {
@@ -31,7 +28,7 @@ func InitLogger() {
 	logger = zapLogger.Sugar()
 }
 
-func initDB() (err error) {
+/* func initDB() (err error) {
 	dbConfig := config.Database()
 
 	db, err = sqlx.Open(dbConfig.Driver(), dbConfig.ConnectionURL())
@@ -48,7 +45,7 @@ func initDB() (err error) {
 	db.SetConnMaxLifetime(time.Duration(dbConfig.MaxLifeTimeMins()) * time.Minute)
 
 	return
-}
+} */
 
 func GetDB() *sqlx.DB {
 	return db
