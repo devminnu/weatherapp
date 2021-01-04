@@ -1,16 +1,16 @@
-APP_NAME: "applocation"
-APP_PORT: "33001"
+APP_NAME: "locationapp"
+APP_PORT: "30001"
 
 DB_DRIVER: "mongodb"
-DB_HOST: "localhost"
-DB_PORT: 27017
+DB_HOST: "locationdb"
+DB_PORT: "31001"
 DB_NAME: "locationdb"
-DB_USER: "admin"
-DB_PASSWORD: "pass123"
+DB_USER: "mongoadmin"
+DB_PASSWORD: "mongoadminpass321"
 DB_AUTH_MECH: "SCRAM-SHA-1"
 
 GRPC_HOST: "localhost"
-GRPC_PORT: 33002
+GRPC_PORT: 30002
 TLS: false
 # CERT_FILE: "server.crt"
 # KEY_FILE: "server.key"

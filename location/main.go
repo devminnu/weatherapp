@@ -45,6 +45,7 @@ func main() {
 func GRPCServe() {
 	host := config.ReadEnvString("GRPC_HOST")
 	port := config.ReadEnvInt("GRPC_PORT")
+	fmt.Println(host, port)
 	// tls := config.ReadEnvBool("TLS")
 	/* 	certFile := config.ReadEnvString("CERT_FILE")
 	   	keyFile := config.ReadEnvString("KEY_FILE")

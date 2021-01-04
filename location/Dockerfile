@@ -8,14 +8,12 @@ COPY . .
 
 WORKDIR  /Users/minhaj/go/src/apps/weatherapp/location
 
-EXPOSE 33001
+EXPOSE 30001
 
+EXPOSE 50051
 
 RUN [ "go", "build", "-o","locationapp", "main.go"]
 
 RUN [ "chmod", "777", "locationapp" ]
 
 CMD [ "./locationapp" ]
-
-# CMD [ "go", "run",  "main.go"]
-
