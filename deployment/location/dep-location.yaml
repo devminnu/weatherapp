@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: locationapp
+  name: locationapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: locationapp
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: locationapp
+    spec:
+      containers:
+      - image: devminnu/locationapp
+        name: locationapp
+        ports:
+        - containerPort: 30001
+        - containerPort: 30002
+        resources: {}
+status: {}
