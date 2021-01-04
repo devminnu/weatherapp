@@ -11,15 +11,6 @@ var logger *zap.Logger
 
 // Should be called only from main!
 func Init() {
-	// gin.DisableConsoleColor()
-
-	// // Logging to a file.
-	// f, _ := os.Create("logs/log.json")
-	// gin.DefaultWriter = io.MultiWriter(f)
-	// zapLogger, err := zap.NewProduction()
-	// if err != nil {
-	// 	panic(err)
-	// }
 	var err error
 	cfg := zap.NewProductionConfig()
 	cfg.OutputPaths = []string{"stderr", "logs/log.log"}
@@ -33,10 +24,9 @@ func Init() {
 
 	gin.SetMode("debug")
 
-	// logger = zapLogger //.Sugar()
-	// zapLogger.Warn("Warning")
-	// zapLogger.Error("Error")
-	// zapLogger.Info("Info")
+	logger.Warn("Warning")
+	logger.Error("Error")
+	logger.Info("Info")
 }
 
 func Get() *zap.Logger {
